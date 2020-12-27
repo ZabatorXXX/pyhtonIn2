@@ -1,5 +1,3 @@
-
-
 def mainMenu():
     print("1. Info for tenta")
     print("2. Text material")
@@ -46,24 +44,27 @@ def list_function():
         print(chooses)   
     
     choice = input("Matta in numer [1][2][3][4][5][6][7]: ")
+    anwser = ''
     if choice == '1':
-        print("Svaret på frågan: Linus Torvalds.")
+        anwser = "Svaret på frågan: Linus Torvalds."
     elif choice == '2':
-        print("Svaret på frågan: Operativ systemt blev till tidigt 1990.")
+        anwser = "Svaret på frågan: Operativ systemt blev till tidigt 1990."
     elif choice == '3':
-        print("Svaret på frågan: Open sorce betyder att koden är öppen för anmällheten att kunna använda sig utav.")
+        anwser = "Svaret på frågan: Open sorce betyder att koden är öppen för anmällheten att kunna använda sig utav."
     elif choice == '4':
-        print("Svaret på frågan: Man kan ha flera if men man skriver bara ha en else. Kan också använda elif.")
+        anwser = "Svaret på frågan: Man kan ha flera if men man skriver bara ha en else. Kan också använda elif."
     elif choice == '5':
-        print("Svaret på frågan: Python är case sensitiv.")
+        anwser = "Svaret på frågan: Python är case sensitiv."
     elif choice == '6':
-        print("Svaret på frågan: Med tecknet (#) brädgård eller en multi line kommentar '''  " )
-        print("                                                                         '''  ")
+        anwser ="Svaret på frågan: Med tecknet (#) brädgård eller en multi line kommentar '''  " 
+        anwser +="                                                                      '''  "
     elif choice == '7':
-        print("Svaret på frågan: Print Working Directory.")    
+        anwser = "Svaret på frågan: Print Working Directory."    
 
     else:
         print("Invalid Input", "Try number from 1 - 7")
         mainMenu()
+    print(anwser)
+    open('history.text', 'a+').write(choice + ' ' + anwser +  '\n') 
 # main routine
 mainMenu()
